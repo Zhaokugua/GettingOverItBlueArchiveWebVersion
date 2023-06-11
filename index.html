@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+
+<!-- Google Tag Manager -->
+<!--script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-55K5P45');</script-->
+<!-- End Google Tag Manager -->
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>攀登!！SRT小队登顶训练！</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.png">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <meta name=keywords content="SRT,MINIGAME,RABBIT,ラビット小隊、RABBIT小队、BLUE ARCHIVE,ブルーアーカイブ, ぶるーあーかいぶ, Blue Archive, BlueArchive, 碧蓝档案, Yostar, ヨースター, ブルアカ, ぶるあか" />
+    <meta name="description" content="碧蓝档案的期间限定小游戏公开中！老师，一起登上山顶吧！" />
+
+    <!-- OGP -->
+    <meta property="og:url" content="https://srt-minigame01.bluearchive.jp/" />
+    <meta property="og:title" content="激登!！SRT式登頂訓練！" />
+    <meta property="og:description" content="ブルーアーカイブの期間限定ミニゲーム公開中！先生、一緒に頂上まで登りましょう！" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://srt-minigame01.bluearchive.jp/TemplateData/OGP.png" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Blue_ArchiveJP" />
+    <meta name="twitter:image" content="https://srt-minigame01.bluearchive.jp/TemplateData/OGP.png" />
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=1300 height=600></canvas>
+      <div id="loading"></div>
+    </div>
+    <script>
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#loading");
+
+      var buildUrl = "./ba_jp/prod/srt/Build";
+      var loaderUrl = buildUrl + "/build.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/e54d98b71b3af395f878277c689ba8eb.data.br",
+        frameworkUrl: buildUrl + "/1485e96329f1083e3a2fb35595bd7158.js.br",
+        codeUrl: buildUrl + "/c25965b559203cc43e896d3d849138d1.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Yostar",
+        productName: "激登!！SRT式登頂訓練！",
+        productVersion: "1.0",
+      };
+
+      config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.position = "fixed";
+
+        document.body.style.textAlign = "left";
+
+        config.devicePixelRatio = 1;
+
+      } else {
+        canvas.style.width = "1300px";
+        canvas.style.height = "600px";
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  
+
+<!-- Google Tag Manager (noscript) -->
+<!--noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55K5P45"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript-->
+<!-- End Google Tag Manager (noscript) -->
+
+</body>
+</html>

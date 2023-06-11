@@ -1,0 +1,7 @@
+body { padding: 0; margin: 0 }
+#unity-container { position: absolute }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-mobile { width: 100%; height: 100% }
+#unity-canvas { background: #FFFFFF }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#loading { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: url('loading_zh.jpg') no-repeat center; background-size: 100%; }
