@@ -5,6 +5,10 @@
 
 激登!！SRT式登頂訓練！
 
+官方地址：[https://srt-minigame01.bluearchive.jp/](https://srt-minigame01.bluearchive.jp/)
+
+Github Pages地址：[https://zhaokugua.github.io/GettingOverItBlueArchiveWebVersion/](https://zhaokugua.github.io/GettingOverItBlueArchiveWebVersion/)
+
  ![loading](https://github.com/Zhaokugua/GettingOverItBlueArchiveWebVersion/blob/main/TemplateData/loading_zh.jpg)
 
 SRT,MINIGAME,RABBIT,ラビット小隊、RABBIT小队、BLUE ARCHIVE,ブルーアーカイブ, ぶるーあーかいぶ, Blue Archive, BlueArchive, 碧蓝档案, Yostar, ヨースター, ブルアカ, ぶるあか
